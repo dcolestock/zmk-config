@@ -31,18 +31,6 @@ ZMK_BEHAVIOR(hrm, hold_tap,
         mods = <(MOD_LSFT|MOD_RSFT)>; \
     )
 
-#define MIRYOKU_SHIFT_MACRO(NAME, BINDING, SHIFT_BINDING) \
-    ZMK_BEHAVIOR(u_macro_ ## NAME, macro, \
-        wait-ms = <0>; \
-        bindings = <SHIFT_BINDING>; \
-    ) \
-    MIRYOKU_SHIFT_FUNCTION(NAME, BINDING, &u_macro_ ## NAME)
-
-MIRYOKU_SHIFT_MACRO(u_bt_sel_0, &bt BT_SEL 0, &bt BT_SEL 0 &bt BT_CLR)
-MIRYOKU_SHIFT_MACRO(u_bt_sel_1, &bt BT_SEL 1, &bt BT_SEL 1 &bt BT_CLR)
-MIRYOKU_SHIFT_MACRO(u_bt_sel_2, &bt BT_SEL 2, &bt BT_SEL 2 &bt BT_CLR)
-MIRYOKU_SHIFT_MACRO(u_bt_sel_3, &bt BT_SEL 3, &bt BT_SEL 3 &bt BT_CLR)
-MIRYOKU_SHIFT_MACRO(u_bt_sel_4, &bt BT_SEL 4, &bt BT_SEL 4 &bt BT_CLR)
 
 MIRYOKU_SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)
 
@@ -94,7 +82,7 @@ ZMK_LAYER(media_layer,
 // ├────────────┼────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
     U_RGB_EFF    &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   U_EP_TOG       ___  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 // ├────────────┼────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
-    &u_bt_sel_0  &u_bt_sel_1  &u_bt_sel_2   &u_bt_sel_3  &u_out_tog     ___  ___        ___        &kp RALT  ___
+    ___  ___  ___   ___  ___     ___  ___        ___        &kp RALT  ___
 // ╰────────────┴────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┴─────────╯
                               &kp C_MUTE    &kp C_PP     &kp C_STOP     ___  ___        ___
 //                           ╰─────────────┴────────────┴───────────╯  ╰────┴──────────┴──────────╯

@@ -25,23 +25,7 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-#define MIRYOKU_SHIFT_FUNCTION(NAME, BINDING, SHIFT_BINDING) \
-    ZMK_BEHAVIOR(NAME, mod_morph, \
-        bindings = <BINDING>, <SHIFT_BINDING>; \
-        mods = <(MOD_LSFT|MOD_RSFT)>; \
-    )
 
-
-MIRYOKU_SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)
-
-MIRYOKU_SHIFT_FUNCTION(u_caps_word, &caps_word, &kp CAPS)
-
-MIRYOKU_SHIFT_FUNCTION(u_rgb_tog, &rgb_ug RGB_TOG, &rgb_ug RGB_OFF)
-MIRYOKU_SHIFT_FUNCTION(u_rgb_eff, &rgb_ug RGB_EFF, &rgb_ug RGB_EFR)
-MIRYOKU_SHIFT_FUNCTION(u_rgb_hui, &rgb_ug RGB_HUI, &rgb_ug RGB_HUD)
-MIRYOKU_SHIFT_FUNCTION(u_rgb_sai, &rgb_ug RGB_SAI, &rgb_ug RGB_SAD)
-MIRYOKU_SHIFT_FUNCTION(u_rgb_bri, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
-MIRYOKU_SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
 
 /* keymap */
 /* format:
@@ -67,9 +51,9 @@ ZMK_LAYER(nav_layer,
 // ╭──────────┬─────────┬─────────┬──────────┬─────────────╮  ╭────┬──────────┬──────────┬─────────┬─────────╮
     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS          ___  ___        ___        ___       ___
 // ├──────────┼─────────┼─────────┼──────────┼─────────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
-    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &u_caps_word     ___  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  ___     ___  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 // ├──────────┼─────────┼─────────┼──────────┼─────────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
-    U_UND      U_CUT     U_CPY     U_PST      U_RDO            ___  ___        ___        &kp RALT  ___
+    ___      ___     ___     ___      ___            ___  ___        ___        &kp RALT  ___
 // ╰──────────┴─────────┼─────────┼──────────┼─────────────┤  ├────┼──────────┼──────────┼─────────┴─────────╯
                          &kp DEL   &kp BSPC   &kp RET          ___  ___        ___
 //                      ╰─────────┴──────────┴─────────────╯  ╰────┴──────────┴──────────╯
@@ -78,9 +62,9 @@ ZMK_LAYER(nav_layer,
 
 ZMK_LAYER(media_layer,
 // ╭────────────┬────────────┬─────────────┬────────────┬───────────╮  ╭────┬──────────┬──────────┬─────────┬─────────╮
-    U_RGB_HUI    U_RGB_SAI    &kp C_VOL_UP  U_RGB_BRI    U_RGB_TOG      ___  ___        ___        ___       ___
+    ___    ___    &kp C_VOL_UP  ___    ___      ___  ___        ___        ___       ___
 // ├────────────┼────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
-    U_RGB_EFF    &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   U_EP_TOG       ___  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+    ___    &kp C_PREV   &kp C_VOL_DN  &kp C_NEXT   ___       ___  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
 // ├────────────┼────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┼─────────┤
     ___  ___  ___   ___  ___     ___  ___        ___        &kp RALT  ___
 // ╰────────────┴────────────┼─────────────┼────────────┼───────────┤  ├────┼──────────┼──────────┼─────────┴─────────╯

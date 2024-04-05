@@ -11,13 +11,13 @@ OUTDIR=$(find output_images/ -maxdepth 1 -type d -name *$COMMIT)
 if [[ -n "$OUTDIR" ]]; then
   echo "Using already downloaded folder $OUTDIR"
 else
+  sleep 2
   for attempt in {1..5}; do
     RUNID=$(gh run list --json headSha,databaseId -q ".[] | select(.headSha == \"$COMMIT\") | .databaseId")
     if [[ -n "$RUNID" ]]; then
       echo "Located run_id: $RUNID"
       break
     fi
-    sleep 2
     echo "Attempt $attempt: run_id not found yet, Retrying..."
   done
 
@@ -36,6 +36,7 @@ else
   gh run download $RUNID -D $TEMPOUT
   mkdir -p $OUTDIR
   mv $TEMPOUT/firmware/* "$OUTDIR"
+  rm -r $TEMPOUT
 fi
 
 MOUNTFOLDER=/run/media/dan/NICENANO

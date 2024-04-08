@@ -75,7 +75,7 @@ MIRYOKU_SHIFT_FUNCTION(u_rgb_bri, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
 /* combos */
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(gaming_layer,  &to GamingBase, LT0 LT1, BASE)
+ZMK_COMBO(gaming_layer,  &to GamingBase, 4 5, BASE)
 
 /* keymap */
 /* format:

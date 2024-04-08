@@ -18,7 +18,7 @@
 #define NUM 3
 #define SYM 4
 #define FUN 5
-#define GamingBase 6
+#define GamingB 6
 #define Gaming2 7
 #define Gaming3 8
 
@@ -157,7 +157,7 @@ ZMK_LAYER(fun_layer,
 //                         ╰──────────┴──────────┴───╯  ╰────────────────┴────────┴──────────╯
 )
 
-ZMK_LAYER(gamingbase_layer,
+ZMK_LAYER(gamingb_layer,
 // ╭──────────┬──────────┬──────────┬────────────┬────────────┬────────────╮  ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
     &kp ESP    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤

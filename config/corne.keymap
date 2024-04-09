@@ -161,8 +161,7 @@ ZMK_LAYER(gamingb_layer,
 // ╭──────────┬──────────┬──────────┬────────────┬────────────┬────────────╮  ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
     &kp ESP    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    // &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
-    __  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  __     &kp SLCK         &kp F4   &kp F5     &kp F6  &kp F11  __
+    &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     // &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
     __  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  __     &kp SLCK         &kp F4   &kp F5     &kp F6  &kp F11  __

@@ -12,7 +12,7 @@
 
 #define __ &none
 
-#define DEF 0  // layer shortcuts, must match order in which they are defined below
+#define BASE 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define MEDIA 2
 #define NUM 3
@@ -85,7 +85,7 @@ MIRYOKU_SHIFT_FUNCTION(u_rgb_bri, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
     xxx xxx
 */
 
-ZMK_LAYER(default_layer,
+ZMK_LAYER(base_layer,
 // ╭───┬────────────┬────────────┬─────────────┬─────────────┬────────╮  ╭────────────┬─────────────┬─────────────┬────────────┬────────────┬───╮
     __  &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y       &kp F        &kp G         &kp C         &kp R        &kp L        __
 // ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
@@ -159,17 +159,13 @@ ZMK_LAYER(fun_layer,
 
 ZMK_LAYER(gamingbase_layer,
 // ╭──────────┬──────────┬──────────┬────────────┬────────────┬────────────╮  ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
-    __  &to BASE        __        __         __         __     &kp PSCRN        &kp F7   &kp F8     &kp F9  &kp F12  __
-    // &kp ESC    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp ESC    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    __  __        __        __         __         __     &kp PAUSE_BREAK  &kp F1   &kp F2     &kp F3  &kp F10  __
-    // &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    __  __        __        __         __         __     &kp PAUSE_BREAK  &kp F1   &kp F2     &kp F3  &kp F10  __
-    // &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ╰──────────┴──────────┴──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┴─────────┴─────────╯
-                            __         __         __     &kp RET          &kp SPC  &kp K_APP
-                                     // &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+                                     &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
 //                                  ╰────────────┴────────────┴────────────╯  ╰─────────┴─────────┴─────────╯
 )
 

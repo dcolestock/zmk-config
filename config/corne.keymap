@@ -47,6 +47,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
         bindings = <BINDING>, <SHIFT_BINDING>; \
         mods = <(MOD_LSFT|MOD_RSFT)>; \
     )
+MIRYOKU_SHIFT_FUNCTION(u_out_tog, &out OUT_TOG, &out OUT_USB)
 
 #define MIRYOKU_SHIFT_MACRO(NAME, BINDING, SHIFT_BINDING) \
     ZMK_BEHAVIOR(u_macro_ ## NAME, macro, \
@@ -93,7 +94,7 @@ ZMK_LAYER(base_layer,
 // ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
     __  &kp SLASH    &kp Q        &kp J         &kp K         &kp X       &kp B        &kp M         &kp W         &kp V        &kp Z        __
 // ╰───┴────────────┴────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┴────────────┴───╯
-                                  &lt FUN DEL   &mo NUM       &mo SYM     &key_repeat  &lt NAV SPC   &mo MEDIA
+                                  &lt FUN DEL   &lt NUM BKSP  &mo SYM     &key_repeat  &lt NAV SPC   &mo MEDIA
 //                               ╰─────────────┴─────────────┴────────╯  ╰────────────┴─────────────┴─────────────╯
 )
 

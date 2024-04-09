@@ -165,7 +165,8 @@ ZMK_LAYER(gamingbase_layer,
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
     &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ╰──────────┴──────────┴──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┴─────────┴─────────╯
-                                     &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+                            __         __         __     &kp RET          &kp SPC  &kp K_APP
+                                     // &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
 //                                  ╰────────────┴────────────┴────────────╯  ╰─────────┴─────────┴─────────╯
 )
 

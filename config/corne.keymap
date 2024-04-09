@@ -19,8 +19,8 @@
 #define SYM 4
 #define FUN 5
 #define GamingBase 6
-#define Gaming2 7
-#define Gaming3 8
+#define Gaming1 7
+#define Gaming2 8
 
 /* custom behaviors */
 

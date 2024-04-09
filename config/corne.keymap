@@ -159,13 +159,17 @@ ZMK_LAYER(fun_layer,
 
 ZMK_LAYER(gamingb_layer,
 // ╭──────────┬──────────┬──────────┬────────────┬────────────┬────────────╮  ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
-    &kp ESP    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    // &kp ESP    &kp SQT    &kp COMMA  &kp DOT      &kp P        &kp Y           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    __  __        __        __         __         __     &kp PSCRN        &kp F7   &kp F8     &kp F9  &kp F12  __
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    // &kp LSHFT  &kp A      &kp O      &kp E        &kp U        &kp I           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    __  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  __     &kp SLCK         &kp F4   &kp F5     &kp F6  &kp F11  __
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    // &kp LCTRL  &kp SLASH  &kp Q      &kp J        &kp K        &kp X           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    __  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  __     &kp SLCK         &kp F4   &kp F5     &kp F6  &kp F11  __
 // ╰──────────┴──────────┴──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┴─────────┴─────────╯
-                                     &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+                                     // &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+                            __         __         __     &kp RET          &kp SPC  &kp K_APP
 //                                  ╰────────────┴────────────┴────────────╯  ╰─────────┴─────────┴─────────╯
 )
 

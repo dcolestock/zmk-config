@@ -21,6 +21,7 @@
 #define GamingBase 6
 #define Gaming1 7
 #define Gaming2 8
+#define Puzzle 9
 
 /* custom behaviors */
 
@@ -77,6 +78,19 @@ MIRYOKU_SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
 ZMK_COMBO(gaming_layer,  &to GamingBase, LT0 LT1, BASE)
+ZMK_COMBO(puzzle_layer,  &to Puzzle, RT0 RT1, BASE)
+
+
+/* macros */
+/ {
+    macros {
+        sudoku: sudoku {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9>;
+        };
+    };
+};
 
 /* keymap */
 /* format:
@@ -194,3 +208,17 @@ ZMK_LAYER(gaming2_layer,
                         __      __       __          &kp UNDER  &kp LPAR  &kp RPAR
 //                     ╰───────┴────────┴────────╯  ╰──────────┴─────────┴──────────╯
 )
+
+
+ZMK_LAYER(puzzle_layer,
+// ╭───┬────────────┬────────────┬─────────────┬─────────────┬────────╮  ╭────────────┬─────────────┬─────────────┬────────────┬────────────┬───╮
+    &to BASE  &kp PG_UP  &kp HOME   &kp UP     &kp END    &kp INS         &sudoku   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   &to BASE
+// ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
+    &to BASE  &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &u_caps_word    &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   &to BASE
+// ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
+    &to BASE  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)       &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  &to BASE
+// ╰───┴────────────┴────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┴────────────┴───╯
+                                  &lt FUN DEL   &lt NUM BKSP  &mo SYM     &key_repeat  &lt NAV SPC   &mo MEDIA
+//                               ╰─────────────┴─────────────┴────────╯  ╰────────────┴─────────────┴─────────────╯
+)
+

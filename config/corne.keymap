@@ -127,11 +127,11 @@ ZMK_LAYER(gamingbase_layer,
 
 ZMK_LAYER(gaming1_layer,
 // ╭────────────┬──────┬──────┬──────┬──────┬──────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬───╮
-    &kp TILDE    &kp L  &kp R  &kp C  &kp G  &kp F     &kp LBKT   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   __
+    &kp TILDE    &kp T  &kp Q  &kp W  &kp E  &kp R     &kp LBKT   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   __
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
-    &kp LS(TAB)  &kp S  &kp N  &kp T  &kp H  &kp D     &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
+    &kp LS(TAB)  &kp G  &kp A  &kp S  &kp D  &kp F     &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
-    &kp LALT     &kp Z  &kp V  &kp W  &kp M  &kp B     &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
+    &kp LALT     &kp B  &kp Z  &kp X  &kp C  &kp V     &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
 // ╰────────────┴──────┴──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┴──────────┴───╯
                                __     __     __        &kp MINUS  &kp NUM_0  &kp DOT
 //                            ╰──────┴──────┴──────╯  ╰──────────┴──────────┴──────────╯

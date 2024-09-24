@@ -116,26 +116,28 @@ ZMK_LAYER(gamingbase_layer,
 // ╭──────────┬──────────┬──────────┬────────────┬────────────┬────────────╮  ╭─────────┬─────────┬─────────┬─────────┬─────────┬─────────╮
     &kp ESC    &kp SPC     &kp Q      &kp W        &kp E        &kp R           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp J      &kp LSHFT   &kp A      &kp S        &kp D        &kp F           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp N      &kp LSHFT   &kp A      &kp S        &kp D        &kp F           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ├──────────┼──────────┼──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    &kp P  &kp LCTRL   &kp Z      &kp X        &kp C        &kp V           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp X  &kp LCTRL   &kp Z      &kp I        &kp C        &kp M           &to BASE  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
 // ╰──────────┴──────────┴──────────┼────────────┼────────────┼────────────┤  ├─────────┼─────────┼─────────┼─────────┴─────────┴─────────╯
-                                     &lt FUN DEL  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+                                     &kp SPC  &mo Gaming1  &mo Gaming2     &to BASE  &to BASE  &to BASE
 //                                  ╰────────────┴────────────┴────────────╯  ╰─────────┴─────────┴─────────╯
 )
 
+// No PJVZUYH
 
 ZMK_LAYER(gaming1_layer,
 // ╭────────────┬──────┬──────┬──────┬──────┬──────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬───╮
-    &kp U    &kp O  &kp N1 &kp N2 &kp N3  &kp I     &kp LBKT   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   __
+    __    &kp O  &kp N1 &kp N2 &kp N3     __     &kp LBKT   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   __
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
-    &kp Y  &kp B  &kp N4  &kp N5 &kp N6  &kp N     &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
+    __  &kp B  &kp N4  &kp N5 &kp N6  __     &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
-    &kp T     &kp G  &kp N7  &kp N8  &kp N9  &kp M     &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
+    &kp T     &kp G  &kp N7  &kp N8  &kp N9  __     &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
 // ╰────────────┴──────┴──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┴──────────┴───╯
                                __     __     __        &kp MINUS  &kp NUM_0  &kp DOT
 //                            ╰──────┴──────┴──────╯  ╰──────────┴──────────┴──────────╯
 )
+
 
 ZMK_LAYER(gaming2_layer,
 // ╭───┬───────┬───────┬───────┬────────┬────────╮  ╭──────────┬─────────┬──────────┬─────────┬──────────┬───╮

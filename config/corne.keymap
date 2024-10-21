@@ -16,12 +16,14 @@
 #define GamingBase 1
 #define Gaming1 2
 #define Gaming2 3
-#define Puzzle 4
-#define NAV 5
-#define MEDIA 6
-#define NUM 7
-#define SYM 8
-#define FUN 9
+#define FactorioBase 4
+#define Factorio1 5
+#define Puzzle 6
+#define NAV 7
+#define MEDIA 8
+#define NUM 9
+#define SYM 10
+#define FUN 11
 
 /* custom behaviors */
 
@@ -90,8 +92,9 @@ MIRYOKU_SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
 /* combos */
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(gaming_layer,  &to GamingBase, LT0 LT1, BASE)
-ZMK_COMBO(puzzle_layer,  &to Puzzle, RT0 RT1, BASE)
+ZMK_COMBO(gaming_layer, &to GamingBase, LT0 LT1, BASE)
+ZMK_COMBO(gaming_layer, &to FactorioBase, LB0 LB1, BASE)
+ZMK_COMBO(puzzle_layer, &to Puzzle, RT0 RT1, BASE)
 
 
 /* macros */
@@ -162,6 +165,26 @@ ZMK_LAYER(gaming2_layer,
 // ╰───┴───────┴───────┼───────┼────────┼────────┤  ├──────────┼─────────┼──────────┼─────────┴──────────┴───╯
                         __      __       __          &kp UNDER  &kp LPAR  &kp RPAR
 //                     ╰───────┴────────┴────────╯  ╰──────────┴─────────┴──────────╯
+)
+
+ZMK_LAYER(factoriobase_layer,
+    &kp ESC &kp SPC &kp Q      &kp W        &kp E        &kp R       &kp ENTER  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp Z  &kp C    &kp A      &kp S        &kp D        &kp F       &kp PLUS   &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp F  &kp O   &hmr L LALT &hmr P LCTRL &hmr T LSHFT  &kp M      &kp MINUS  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+                                     &kp SPC  &mo Factorio1  &mo Gaming2     &to BASE  &to BASE  &to BASE
+)
+
+
+ZMK_LAYER(factorio1_layer,
+// ╭────────────┬──────┬──────┬──────┬──────┬──────╮  ╭──────────┬──────────┬──────────┬──────────┬──────────┬───╮
+    __           &kp O  &kp N1 &kp N2 &kp N3     &kp LC(C)     &kp LBKT   &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp RBKT   __
+// ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
+    __           &kp LC(Y) &kp N4  &kp N5 &kp N6  &kp LC(V)    &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
+// ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
+    &kp LC(F)    &kp LC(Z)  &kp N7  &kp N8  &kp N9  &kp LC(X)    &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
+// ╰────────────┴──────┴──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┴──────────┴───╯
+                               __     __     __        &kp MINUS  &kp NUM_0  &kp DOT
+//                            ╰──────┴──────┴──────╯  ╰──────────┴──────────┴──────────╯
 )
 
 ZMK_LAYER(puzzle_layer,

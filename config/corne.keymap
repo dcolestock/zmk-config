@@ -89,6 +89,12 @@ MIRYOKU_SHIFT_FUNCTION(u_rgb_sai, &rgb_ug RGB_SAI, &rgb_ug RGB_SAD)
 MIRYOKU_SHIFT_FUNCTION(u_rgb_bri, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
 MIRYOKU_SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
 
+ZMK_BEHAVIOR(factorio_find, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(F) &to BASE>;
+)
+
 /* combos */
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
@@ -170,7 +176,7 @@ ZMK_LAYER(gaming2_layer,
 ZMK_LAYER(factoriobase_layer,
     &kp ESC &kp SPC &kp Q      &kp W        &kp E        &kp R       &kp ENTER  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
     &kp Z  &kp C    &kp A      &kp S        &kp D        &kp F       &kp PLUS   &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
-    &kp F  &kp O   &hmr L LALT &hmr P LCTRL &hmr T LSHFT  &kp M      &kp MINUS  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp F  &kp O   &hmr LALT L &hmr LCTRL P &hmr LSHFT T  &kp M      &kp MINUS  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
                                      &kp SPC  &mo Factorio1  &mo Gaming2     &to BASE  &to BASE  &to BASE
 )
 
@@ -181,7 +187,7 @@ ZMK_LAYER(factorio1_layer,
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
     __           &kp LC(Y) &kp N4  &kp N5 &kp N6  &kp LC(V)    &kp EQL    &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp SEMI   __
 // ├────────────┼──────┼──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┼──────────┼───┤
-    &kp LC(F)    &kp LC(Z)  &kp N7  &kp N8  &kp N9  &kp LC(X)    &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
+    &factorio_find &kp LC(Z)  &kp N7  &kp N8  &kp N9  &kp LC(X)    &kp BSLH   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp GRAVE  __
 // ╰────────────┴──────┴──────┼──────┼──────┼──────┤  ├──────────┼──────────┼──────────┼──────────┴──────────┴───╯
                                __     __     __        &kp MINUS  &kp NUM_0  &kp DOT
 //                            ╰──────┴──────┴──────╯  ╰──────────┴──────────┴──────────╯

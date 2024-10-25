@@ -175,8 +175,8 @@ ZMK_LAYER(gaming2_layer,
 
 ZMK_LAYER(factoriobase_layer,
     &kp ESC &kp SPC &kp Q      &kp W        &kp E        &kp R       &kp ENTER  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
-    &kp Z  &kp C    &kp A      &kp S        &kp D        &kp F       &kp PLUS   &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
-    &kp F  &kp O   &hmr LALT L &hmr LCTRL P &hmr LSHFT T  &kp M      &kp MINUS  &to BASE  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp Z  &kp C    &kp A      &kp S        &kp D        &kp F       &kp PLUS   &kp H  &to BASE  &to BASE  &to BASE  &to BASE
+    &kp F  &kp O  &hmr LALT L &hmr LCTRL P &hmr LSHFT T  &kp M       &kp MINUS  &kp V  &to BASE  &to BASE  &to BASE  &to BASE
                                      &kp SPC  &mo Factorio1  &mo Gaming2     &to BASE  &to BASE  &to BASE
 )
 

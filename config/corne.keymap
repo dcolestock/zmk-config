@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/keypos_def/keypos_42keys.h"
+#include "zmk-helpers/key-labels/keypos_42keys.h"
 
 /* layer and key shortcuts */
 

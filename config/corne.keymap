@@ -96,15 +96,8 @@ ZMK_COMBO(puzzle_layer, &to Puzzle, RT0 RT1, BASE)
 
 
 /* macros */
-/ {
-    macros {
-        sudoku: sudoku {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9>;
-        };
-    };
-};
+ZMK_MACRO(sudoku, bindings = <&macro_tap &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9>;)
+
 
 ZMK_LAYER(base_layer,
 // ╭───┬────────────┬────────────┬─────────────┬─────────────┬────────╮  ╭────────────┬─────────────┬─────────────┬────────────┬────────────┬───╮

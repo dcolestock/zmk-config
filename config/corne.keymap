@@ -13,12 +13,12 @@
 #define __ &none
 
 #define BASE 0  // layer shortcuts, must match order in which they are defined below
-#define Puzzle 6
-#define NAV 7
-#define MEDIA 8
-#define NUM 9
-#define SYM 10
-#define FUN 11
+#define Puzzle 1
+#define NAV 2
+#define MEDIA 3
+#define NUM 4
+#define SYM 5
+#define FUN 6
 
 /* custom behaviors */
 

@@ -89,17 +89,9 @@ MIRYOKU_SHIFT_FUNCTION(u_rgb_sai, &rgb_ug RGB_SAI, &rgb_ug RGB_SAD)
 MIRYOKU_SHIFT_FUNCTION(u_rgb_bri, &rgb_ug RGB_BRI, &rgb_ug RGB_BRD)
 MIRYOKU_SHIFT_FUNCTION(u_ep_tog, &ext_power EP_TOG, &ext_power EP_OFF)
 
-ZMK_BEHAVIOR(factorio_find, macro,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&kp LC(F) &to BASE>;
-)
-
 /* combos */
 #undef COMBO_TERM
 #define COMBO_TERM 40  // timeout of 40ms (default is 30ms if omitted)
-ZMK_COMBO(gaming_layer, &to GamingBase, LT0 LT1, BASE)
-ZMK_COMBO(factorio_layer, &to FactorioBase, LB0 LB1, BASE)
 ZMK_COMBO(puzzle_layer, &to Puzzle, RT0 RT1, BASE)
 
 
@@ -113,14 +105,6 @@ ZMK_COMBO(puzzle_layer, &to Puzzle, RT0 RT1, BASE)
         };
     };
 };
-
-/* keymap */
-/* format:
- xxxxxx xxxxxx
- xxxxxx xxxxxx
- xxxxxx xxxxxx
-    xxx xxx
-*/
 
 ZMK_LAYER(base_layer,
 // ╭───┬────────────┬────────────┬─────────────┬─────────────┬────────╮  ╭────────────┬─────────────┬─────────────┬────────────┬────────────┬───╮

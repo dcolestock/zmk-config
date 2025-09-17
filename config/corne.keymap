@@ -27,37 +27,6 @@
 
 /* custom behaviors */
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left-hand keys
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right-hand keys
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumb keys
-
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = "balanced"; \
-        tapping-term-ms = <280>; \
-        require-prior-idle-ms = <150>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
-
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
-#define MAKE_HRM_PINKY(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = "tap-preferred"; \
-        tapping-term-ms = <320>; \
-        require-prior-idle-ms = <150>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
-
-MAKE_HRM_PINKY(hmlp, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM_PINKY(hmrp, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
-
 #define MIRYOKU_SHIFT_FUNCTION(NAME, BINDING, SHIFT_BINDING) \
     ZMK_BEHAVIOR(NAME, mod_morph, \
         bindings = <BINDING>, <SHIFT_BINDING>; \
@@ -103,7 +72,7 @@ ZMK_LAYER(base_layer,
 // ╭───┬────────────┬────────────┬─────────────┬─────────────┬────────╮  ╭────────────┬─────────────┬─────────────┬────────────┬────────────┬───╮
     __  &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y       &kp F        &kp G         &kp C         &kp R        &kp L        __
 // ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
-    __  &hmlp LGUI A  &hml LALT O  &hml LCTRL E  &hml LSHFT U  &kp I      &kp D        &hmr LSHFT H  &hmr LCTRL T  &hmr LALT N  &hmrp LGUI S  __
+    __  U_MT_L(LGUI, A)  U_MT_L(LALT, O)  U_MT_L(LCTRL, E)  U_MT_L(LSHFT, U)  &kp I      &kp D        U_MT_R(LSHFT, H)  U_MT_R(LCTRL, T)  U_MT_R(LALT, N)  U_MT_R(LGUI, S) __
 // ├───┼────────────┼────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┼────────────┼───┤
     &studio_unlock  &kp SLASH  &kp Q  &kp J     &kp K         &kp X       &kp B        &kp M         &kp W         &kp V        &kp Z        __
 // ╰───┴────────────┴────────────┼─────────────┼─────────────┼────────┤  ├────────────┼─────────────┼─────────────┼────────────┴────────────┴───╯

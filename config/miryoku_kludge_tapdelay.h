@@ -25,13 +25,13 @@
 #define MIRYOKU_TAPDELAY_TAP(CODE) \
 U_MACRO(u_tapdelay_tap_##CODE, bindings = <&macro_press &kp CODE>, <&macro_release &kp CODE>;)
 
-#define MIRYOKU_TAPDELAY_MT_L(CODE) \
+#define MIRYOKU_TAPDELAY_MT_LEFT(CODE) \
 / { \
   behaviors { \
-    u_tapdelay_mt_l_##CODE: u_tapdelay_mt_l_##CODE { \
+    u_tapdelay_mt_left_##CODE: u_tapdelay_mt_left_##CODE { \
       compatible = "zmk,behavior-hold-tap"; \
       #binding-cells = <2>; \
-      tapping-term-ms = <U_TAPPING_TERM>; \
+      tapping-term-ms = <280>; \
       require-prior-idle-ms = <150>; \
       flavor = "balanced"; \
       bindings = <&kp>, <&u_tapdelay_tap_##CODE>; \
@@ -41,13 +41,45 @@ U_MACRO(u_tapdelay_tap_##CODE, bindings = <&macro_press &kp CODE>, <&macro_relea
   }; \
 };
 
-#define MIRYOKU_TAPDELAY_MT_R(CODE) \
+#define MIRYOKU_TAPDELAY_MT_RIGHT(CODE) \
 / { \
   behaviors { \
-    u_tapdelay_mt_r_##CODE: u_tapdelay_mt_r_##CODE { \
+    u_tapdelay_mt_right_##CODE: u_tapdelay_mt_right_##CODE { \
       compatible = "zmk,behavior-hold-tap"; \
       #binding-cells = <2>; \
-      tapping-term-ms = <U_TAPPING_TERM>; \
+      tapping-term-ms = <280>; \
+      require-prior-idle-ms = <150>; \
+      flavor = "balanced"; \
+      bindings = <&kp>, <&u_tapdelay_tap_##CODE>; \
+      hold-trigger-key-positions = <KEYS_L THUMBS>; \
+      hold-trigger-on-release; \
+    }; \
+  }; \
+};
+
+#define MIRYOKU_TAPDELAY_MT_LEFT_PINKY(CODE) \
+/ { \
+  behaviors { \
+    u_tapdelay_mt_left_pinky_##CODE: u_tapdelay_mt_left_pinky_##CODE { \
+      compatible = "zmk,behavior-hold-tap"; \
+      #binding-cells = <2>; \
+      tapping-term-ms = <320>; \
+      require-prior-idle-ms = <150>; \
+      flavor = "balanced"; \
+      bindings = <&kp>, <&u_tapdelay_tap_##CODE>; \
+      hold-trigger-key-positions = <KEYS_R THUMBS>; \
+      hold-trigger-on-release; \
+    }; \
+  }; \
+};
+
+#define MIRYOKU_TAPDELAY_MT_RIGHT_PINKY(CODE) \
+/ { \
+  behaviors { \
+    u_tapdelay_mt_right_pinky_##CODE: u_tapdelay_mt_right_pinky_##CODE { \
+      compatible = "zmk,behavior-hold-tap"; \
+      #binding-cells = <2>; \
+      tapping-term-ms = <320>; \
       require-prior-idle-ms = <150>; \
       flavor = "balanced"; \
       bindings = <&kp>, <&u_tapdelay_tap_##CODE>; \
@@ -70,8 +102,10 @@ U_MACRO(u_tapdelay_tap_##CODE, bindings = <&macro_press &kp CODE>, <&macro_relea
   }; \
 };
 
-#define U_MT_L(MOD, TAP) &u_tapdelay_mt_l_##TAP MOD 0
-#define U_MT_R(MOD, TAP) &u_tapdelay_mt_r_##TAP MOD 0
+#define U_MT_L(MOD, TAP) &u_tapdelay_mt_left_##TAP MOD 0
+#define U_MT_R(MOD, TAP) &u_tapdelay_mt_right_##TAP MOD 0
+#define U_MT_LP(MOD, TAP) &u_tapdelay_mt_left_pinky_##TAP MOD 0
+#define U_MT_RP(MOD, TAP) &u_tapdelay_mt_right_pinky_##TAP MOD 0
 #define U_LT(LAYER, TAP) &u_tapdelay_lt_##TAP LAYER 0
 
 #define MIRYOKU_TAPDELAY_LIST \

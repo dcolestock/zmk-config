@@ -13,7 +13,7 @@ if [[ -n "$OUTDIR" ]]; then
 else
   sleep 2
   for attempt in {1..5}; do
-    RUNID=$(gh run list --json headSha,databaseId -q ".[] | select(.headSha == \"$COMMIT\") | .databaseId")
+    RUNID=$(gh run list --json headSha,databaseId -q ".[] | select(.headSha == \"$COMMIT\") | .databaseId" | head -n1)
     if [[ -n "$RUNID" ]]; then
       echo "Located run_id: $RUNID"
       break
